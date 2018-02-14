@@ -169,43 +169,43 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void autonomousPeriodic() {
-//        camMode.setNumber(0);
-//        pipeline0.setNumber(0);
-//        ledMode.setNumber(0);
-//        switch (autoCommand) {
-//            case AUTO1:
-//                Timer autoTimer = new Timer();
-//                autoTimer.scheduleAtFixedRate(new TimerTask() {
-//                    @Override
-//                    public void run() {
-//                        leftSideDrive.set(-0.3);
-//                        rightSideDrive.set(-0.3);
-//                        counter++;
-//                        if(counter > 2 && counter < 3) {
-//                            leftSideDrive.set(0);
-//                            rightSideDrive.set(0);
-//                        } else if(counter >= 3) {
-//                            if(tv.getDouble(0) == 1.0) {
-//                                leftSideDrive.set(0.4);
-//                                rightSideDrive.set(-0.4);
-//                            }
-//                            if(ta.getDouble(0) >= 20.0) {
-//                                leftSideDrive.set(0);
-//                                rightSideDrive.set(0);
-//                            }
-//                            if(tv.getDouble(0) != 1) {
-//                                leftSideDrive.set(0.3);
-//                                rightSideDrive.set(0.3);
-//                            }
-//                        } else if(counter == 15) {
-//                            autoTimer.cancel();
-//                        }
-//                    }
-//                },0,1000);
-//                break;
-//            case AUTO2:
-//                // Put default auto code here
-//                break;
+        camMode.setNumber(0);
+        pipeline0.setNumber(0);
+        ledMode.setNumber(0);
+        switch (autoCommand) {
+            case AUTO1:
+                Timer autoTimer = new Timer();
+                autoTimer.scheduleAtFixedRate(new TimerTask() {
+                    @Override
+                    public void run() {
+                        leftSideDrive.set(-0.3);
+                        rightSideDrive.set(-0.3);
+                        counter++;
+                        if(counter > 2 && counter < 3) {
+                            leftSideDrive.set(0);
+                            rightSideDrive.set(0);
+                        } else if(counter >= 3) {
+                            if(tv.getDouble(0) == 1.0) {
+                                leftSideDrive.set(0.4);
+                                rightSideDrive.set(-0.4);
+                            }
+                            if(ta.getDouble(0) >= 20.0) {
+                                leftSideDrive.set(0);
+                                rightSideDrive.set(0);
+                            }
+                            if(tv.getDouble(0) != 1) {
+                                leftSideDrive.set(0.3);
+                                rightSideDrive.set(0.3);
+                            }
+                        } else if(counter == 15) {
+                            autoTimer.cancel();
+                        }
+                    }
+                },0,1000);
+                break;
+            case AUTO2:
+                // Put default auto code here
+                break;
         }
 		/*
 		Timer autoTimer = new Timer();
