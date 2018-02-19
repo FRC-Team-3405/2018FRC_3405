@@ -25,7 +25,6 @@ class Robot : IterativeRobot() {
 
     override fun testInit() {}
 
-
     override fun disabledPeriodic() {}
 
     override fun autonomousPeriodic() {}

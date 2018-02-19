@@ -9,10 +9,10 @@ import frc.team3405.robot.Robot
 import frc.team3405.robot.commands.DriveCommand
 
 class DriveTrain : Subsystem() {
-    private val frontRight: Talon = Talon(0)
-    private val frontLeft: Talon = Talon(1)
-    private val backLeft: Talon = Talon(2)
-    private val backRight: Talon = Talon(3)
+    private val frontLeft: Talon = Talon(0)
+    private val frontRight: Talon = Talon(1)
+    private val backRight: Talon = Talon(2)
+    private val backLeft: Talon = Talon(3)
     private val robotDrive: MecanumDrive = MecanumDrive(frontLeft, backLeft, frontRight, backRight)
 
     override fun initDefaultCommand() {
