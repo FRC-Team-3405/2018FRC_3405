@@ -33,7 +33,7 @@ class DriveTrain : Subsystem() {
 
 
     fun mecanumDrive() {
-        robotDrive.driveCartesian(Robot.joystick.leftX, Robot.joystick.leftY, Robot.joystick.rightX)
+        robotDrive.driveCartesian(Robot.joystick.leftY, Robot.joystick.leftX, Robot.joystick.rightX)
     }
 
 }
