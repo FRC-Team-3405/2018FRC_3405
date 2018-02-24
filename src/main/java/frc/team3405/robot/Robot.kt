@@ -10,6 +10,7 @@ import frc.team3405.robot.subsystems.DriveTrain
 import frc.team3405.robot.subsystems.Pneumatics
 import frc.team3405.robot.subsystems.Reporter
 
+
 class Robot : IterativeRobot() {
     companion object {
         val driveTrain = DriveTrain()
@@ -20,6 +21,8 @@ class Robot : IterativeRobot() {
         //Gear shifting buttons
         val highGearButton = JoystickButton(joystick.joystick, Xbox.RightBumper)
         val lowGearButton = JoystickButton(joystick.joystick, Xbox.LeftBumper)
+
+
     }
 
     override fun robotInit() {
@@ -34,7 +37,7 @@ class Robot : IterativeRobot() {
     override fun autonomousInit() {}
 
     override fun teleopInit() {
-        println("I started")
+        System.out.println("Teleop Started")
     }
 
     override fun testInit() {}

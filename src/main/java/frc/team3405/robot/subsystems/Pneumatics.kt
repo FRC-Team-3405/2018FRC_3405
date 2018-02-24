@@ -3,10 +3,8 @@ package frc.team3405.robot.subsystems
 import edu.wpi.first.wpilibj.Compressor
 import edu.wpi.first.wpilibj.DoubleSolenoid
 import edu.wpi.first.wpilibj.command.Subsystem
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard
-import frc.team3405.robot.Robot
-import frc.team3405.robot.commands.ShiftDownCommand
-import frc.team3405.robot.commands.ShiftUpCommand
+
+
 
 
 class Pneumatics: Subsystem() {
@@ -27,6 +25,7 @@ class Pneumatics: Subsystem() {
 }
 
 class PneumaticShifter(val compressor: Compressor, val doubleSolenoid: DoubleSolenoid) {
+
     var isHighGear = false
 
     fun enabled() {
@@ -44,7 +43,7 @@ class PneumaticShifter(val compressor: Compressor, val doubleSolenoid: DoubleSol
 
     fun shiftUp() {
         System.out.println("Shift Up")
-        if(!isHighGear) {
+        if (!isHighGear) {
             doubleSolenoid.set(DoubleSolenoid.Value.kForward)
             isHighGear = true
         }
@@ -52,7 +51,7 @@ class PneumaticShifter(val compressor: Compressor, val doubleSolenoid: DoubleSol
 
     fun shiftDown() {
         System.out.println("Shift Down")
-        if(isHighGear) {
+        if (isHighGear) {
             doubleSolenoid.set(DoubleSolenoid.Value.kReverse)
             isHighGear = false
         }
